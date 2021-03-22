@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8"> <!-- sistema de codificação aceita ç ´ ` ~ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* css */
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      width: 95vw;
+      height: 90vh;
+
+      margin: auto;
+
+      font-family: Nunito, sans-serif;
+
+      background: #ada8a8;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+
+      /* outline: blue 2px solid; /* borda externa azul de 2px de espessura */
+      /* padding: 10px; /* espaçamento interno de 10 pixels */
+      /* width: 400px; /* largura do formulário */
+      /* margin: 40px auto; /*espaçamento esterno de 40 pixels dentralizado */
+    }
+
+    #menu .menu {
+      width: 30rem;
+      height: 3rem;
+
+      margin-top: 2rem;
+
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #menu .menu li {
+      list-style: none;
+    }
+
+    #menu .menu li a {
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      border: none;
+      background: #ada8a8;
+
+      transition: 8;
+    }
+
+    #menu .menu li a:hover {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    #menu .menu li a:focus {
+      outline: none;
+    }
+
+    #menu .menu a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .main {
+      height: 40rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main div {
+      border: none;
+      height: 30rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main div h2 {
+      padding-left: 2rem;
+
+      font-size: 2.2rem;
+      font-weight: 600;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main div .formComponent {
+      font-size: 1.2rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+    }
+
+    .main div .formComponent input,
+    .main div .formComponent button {
+      width: 15rem;
+      height: 2rem;
+
+      border: 0;
+      border-radius: 0.8rem;
+
+      font-weight: 600;
+      font-family: Nunito, sans-serif;
+      font-size: 1.2rem;
+      color: #383535;
+
+      cursor: pointer;
+    }
+
+    .main div .formComponent input {
+      padding-left: 1rem;
+      cursor: text;
+    }
+
+    .main div .formComponent *:focus {
+      outline-color: #5f5c5c;
+    }
+
+    .main div .response {
+      height: 2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  </style>
+  <title> Exemplo 2 </title>
+</head>
+
+<body>
+  <nav id="menu">
+    <!-- nagigator component -->
+    <ul class="menu">
+      <!-- unordened list, lista não ordenada-->
+      <li><a href="home.html">Home</a></li> <!-- list item -->
+      <li><a href="imc.html">Calcula IMC</a></li>
+      <li><a href="viagem.html">Custo da Viagem</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <div id="calculatesIMC">
+      <h2>
+        Sistema de cálculo de IMC - Índice de Massa Corpórea
+      </h2>
+      <div class="formComponent">
+        <!-- container -->
+        <label for="weight">Peso</label> <!-- rótulo -->
+        <input name="weight" type="number" id="weight" /> <!-- caixa de entrada de dados -->
+      </div>
+      <div class="formComponent">
+        <label for="height">Altura</label>
+        <input id="height" name="height" type="number" />
+      </div>
+      <div class="formComponent">
+        <button type="button" onClick="calculatesIMC()">Calcular IMC</button>
+      </div>
+      <div class="response" id="responseCalculatesIMC"></div>
+    </div>
+  </main>
+  <script> // javascript
+    function verifyIsNumber(bmi) {  // função para verificar os resultados da operação
+      switch (Number.isNaN(bmi)) {
+        case true: // case é um NaN (not a number: não é número)
+          return alert("digite todos os valores para obter os resultados");
+          break;
+        case false: // caso é um número
+          if (Number.isFinite(bmi)) { // caso tenha digitado os dois valores
+            if (bmi !== 0.00) {
+              return document.getElementById("responseCalculatesIMC").innerHTML = bmi.toFixed(2);
+            } else {
+              return alert("digite todos os valores para obter os resultados");
+            }
+          } else { // caso tenha digitado apenas o primeiro valor
+            return alert("digite todos os valores para obter os resultados");
+          }
+          break;
+      }
+    }
+
+    function calculatesIMC() {
+      let weight = document.getElementById("weight").value;
+      let height = document.getElementById("height").value;
+      let bmi = weight / (height * height);
+      return verifyIsNumber(bmi);
+    }
+
+    function calculatesTravelCost() {
+      let firstToll = Number(document.getElementById("first-toll").value);
+      let secondToll = Number(document.getElementById("second-toll").value);
+      let fuel = Number(document.getElementById("fuel").value);
+      let travelCost = firstToll + secondToll + fuel;
+      document.getElementById("responseTravelCost").innerHTML = travelCost;
+    }
+
+    function removeIMCData() {
+      weight = undefined;
+      height = undefined;
+      bmi = undefined;
+      document.getElementById("weight").value = undefined;
+      document.getElementById("height").value = undefined;
+      document.getElementById("responseCalculatesIMC").innerHTML = '';
+    }
+
+    function removeCostData() {
+      firstToll = undefined;
+      secondToll = undefined;
+      fuel = undefined;
+      travelCost = undefined;
+      document.getElementById("first-toll").value = undefined;
+      document.getElementById("second-toll").value = undefined;
+      document.getElementById("fuel").value = undefined;
+      document.getElementById("responseTravelCost").innerHTML = "";
+    }
+
+    function switchToPageCalculatesIMC() {
+      document.getElementById("travelCost").style.display = "none";
+      document.getElementById("calculatesIMC").style.display = "flex";
+      removeCostData();
+    }
+
+    function switchToPageTravelCost() {
+      document.getElementById("calculatesIMC").style.display = "none";
+      document.getElementById("travelCost").style.display = "flex";
+      removeIMCData();
+    }
+  </script>
+</body>
+
+</html>

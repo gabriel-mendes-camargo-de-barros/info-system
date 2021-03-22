@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2 </title>
+        <meta charset="utf-8"/> <!-- Sistema de codificação aceita ç á à â-->
+        <!-- meta é auto-explicação, falar de si mesmo -->
+        <style>
+            /*css */
+            #formulario {
+                outline: black 2px solid; /* borda externa de 2px de Largura */
+                padding: 30px; /* espaçamento interno de 30 pixels (bolinha) */
+                width: 550px; /* largura do formulario */
+                margin: 40px auto; /* espaçamento externo de 40 pixels */
+                background-color: whitesmoke;
+                }
+                #divpeso, #divAltura, #botao{
+                    margin: 10px;
+                }
+                h2 {
+                    color:black;
+                }
+                #menu ul{
+                    padding: 10px; /*espaçamento interno (conteúdo da lista) de 0px da Lista */
+                    margin: 10px; /* epaçamento externo (margem) de 0px da Lista */
+                    background-color:whitesmoke; /* cor de Fundo da Lista */
+                    list-style:none; /* Lista não terá bolinhas - os itens */
+                    outline:black 2px solid;
+                }
+                #menu ul li {
+                    display: inline; /* os itens da lista ficarão em uma linha única */
+                    padding: 25px;
+                }
+                /* Regra se aplica ao link dos itens da lista no menu*/
+                #menu ul li a {
+                    background-color: none; /* Cor de fundo*/
+                    color:black; /* Cor do Texto*/
+                    text-decoration: none; /* Sem Sublinhado*/
+                    border-bottom: 3px solid #050505; /* Borda em baixo com sitema de cores X (Proxima aula)*/
+                    
+                }
+            #Pedagios{
+                padding: 50px;
+                outline: black 2px solid;
+                margin: 40px auto;
+                width: 500px;
+                margin-top: 200px;
+            }
+                #Pedagio1, #Pedagio2, #Calcular {
+                    margin: 5px;
+                }
+        </style>
+        <script>
+             /* JavaScript*/ 
+            function calcular(){ // usamos function para organizar
+                // vamos recuperar o peso digitado pelo usuario
+                // getElementById("peso") -> recupera a caixa de texto
+                // .value -> recupera o valor dentro da caixa de texto
+                // let peso -> declarando uma variavel que guarda o peso
+                let peso = document.getElementById("peso").value
+                // Vamos recuperar a altura digitada pelo usuario
+                let altura = document.getElementById("altura").value
+                // Calcular e mostrar o IMC
+                // Comando de igual é de atribuição
+                let imc = peso / (altura * altura)
+                alert  (`O Valor do imc é de ${imc.toFixed(2)}`) // Mais novo
+                // alert ("O Valor do imc é de " + imc) // Mais velho
+                // alert (peso/(altura * altura)(to.Fixed(2)))
+                // alert (imc) Forma básica sem frase
+            }
+            function Calcular(){
+                let p1 = Number(document.getElementById("pedagio1").value)
+                let p2 = Number(document.getElementById("pedagio2").value)
+                let c = Number(document.getElementById("combustivel").value)
+                let valor = p1 + p2 + c
+                alert(`O valor do imc é de ${valor.toFixed(2)}`)
+            }
+        </script>
+    </head>
+    <body>
+        <nav id="menu"> <!-- Menu da Navegação-->
+            <ul> <!-- unorded list ou Lista Não ordenada -->
+                <li> <a href="#"> Home </a> </li> <!-- List item ou Item da Lista-->
+                <li> <a href="#"> Calculadora do IMC> </a> </li>
+                <li> <a href="#"> Custo de Viagem> </a> </li>
+                <li> <a href="#"> Sobre </a> </li>
+            </ul>
+        </nav>
+        <div id="formulario">
+            <h2> Sistema de cálculo de IMC - Índice de Massa Corpórea </h2>
+            <div id="divpeso"> <!-- container -->
+                <label> Peso </label> <!-- rótulo -->
+                <input type="number" id="peso"/> <!-- caixa de entrada de dados -->
+            </div>
+            <div id="divAltura">
+                <label> Altura </label>
+                <input type="number" id="altura"/>
+            </div>
+            <div id="botao">
+                <button onclick="calcular()" type="button"> Calcular </button>
+            </div>
+        </div>
+        <div id="Pedagios">
+            <h3> Custo de viagem </h3>
+            <div id=Pedagio1>
+                <label> Pedagio 1 </label>
+                <input type="number" id="pedagio1"/>
+            </div>
+            <div id="Pedagio2">
+                <label> Pedagio 2 </label>
+                <input type="number" id="pedagio2"/>
+            </div>
+            <div id="Combustivel1">
+                <label> Combustivel </label>
+                <input type="number" id="combustivel"/>
+            </div>
+            <div id="Calcular">
+                <button onclick="Calcular()" type="button"> Comfirma </button>
+            </div>
+        </div>
+    </body>
+</html>

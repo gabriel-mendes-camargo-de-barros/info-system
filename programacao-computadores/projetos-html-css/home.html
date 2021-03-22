@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Home</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      width: 95vw;
+      height: 90vh;
+
+      margin: auto;
+
+      font-family: Nunito, sans-serif;
+
+      background: #ada8a8;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+
+      /* outline: blue 2px solid; /* borda externa azul de 2px de espessura */
+      /* padding: 10px; /* espaçamento interno de 10 pixels */
+      /* width: 400px; /* largura do formulário */
+      /* margin: 40px auto; /*espaçamento esterno de 40 pixels dentralizado */
+    }
+
+    #menu .menu {
+      width: 30rem;
+      height: 3rem;
+
+      margin-top: 2rem;
+
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #menu .menu li {
+      list-style: none;
+    }
+
+    #menu .menu li a {
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      color: #000000;
+      text-decoration: none;
+
+      border: none;
+      background: #ada8a8;
+
+      transition: 8;
+    }
+
+    #menu .menu li a:hover {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    #menu .menu li a:focus {
+      outline: none;
+    }
+
+    main {
+      height: 15rem;
+
+      margin-top: 3rem;
+      padding: 0 10rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main h1 {
+      width: 50rem;
+    }
+
+    main .caixa {
+      width: 30rem;
+      border: 0;
+      background-color: #ffffff;
+
+      padding: 1.2rem;
+      border-radius: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <nav id="menu">
+    <!-- nagigator component -->
+    <ul class="menu">
+      <!-- unordened list, lista não ordenada-->
+      <li><a href="home.html">Home</a></li> <!-- list item -->
+      <li><a href="imc.html">Calcula IMC</a></li>
+      <li><a href="viagem.html">Custo da Viagem</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>
+      Seja bem vindo ao portal de saúde. Aqui você encontra dicas de bem-estar e cuidados alimentares
+    </h1>
+    <div class="caixa">
+      isso é um comteudo. isso é um comteudo. isso é um comteudo. isso é um comteudo. isso é um comteudo.
+      isso é um comteudo. isso é um comteudo. isso é um comteudo.
+    </div>
+  </main>
+</body>
+</html>
