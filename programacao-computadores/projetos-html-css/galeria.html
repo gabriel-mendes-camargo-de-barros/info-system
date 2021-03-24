@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,7 +88,7 @@
       width: 50rem;
     }
 
-    main .caixa {
+    main .galeria {
       width: 30rem;
       border: 0;
       background-color: #ffffff;
@@ -95,8 +96,21 @@
       padding: 1.2rem;
       border-radius: 0.8rem;
     }
+
+    main .galeria .item-galeria {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+    }
+
+    main .galeria .item-galeria img {
+      width: 100%;
+      height: auto;
+    }
   </style>
 </head>
+
 <body>
   <nav id="menu">
     <!-- nagigator component -->
@@ -113,8 +127,29 @@
     <h1>
       pagina da galeria
     </h1>
-    <div class="caixa">
+    <div class="galeria">
+      <div class="item-galeria">
+        <a href="/img/corrida.jpg" target="_blank">
+          <img src="/img/corrida.jpg" alt="imagem de corrida">
+        </a>
+      </div>
+      <div class="item-galeria">
+        <a href="/img/dieta.jpg" target="_blank">
+          <img src="/img/dieta.jpg" alt="">
+        </a>
+      </div>
+      <div class="item-galeria">
+        <a href="/img/lazer.jpg" target="_blank">
+          <img src="/img/lazer.jpg" alt="">
+        </a>
+      </div>
+      <div class="item-galeria">
+        <a href="/img/natacao.png" target="_blank">
+          <img src="/img/natacao.png" alt="">
+        </a>
+      </div>
     </div>
   </main>
 </body>
+
 </html>
