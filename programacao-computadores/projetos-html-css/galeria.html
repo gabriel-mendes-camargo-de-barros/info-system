@@ -11,6 +11,7 @@
     * {
       padding: 0;
       margin: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -95,18 +96,33 @@
 
       padding: 1.2rem;
       border-radius: 0.8rem;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.2rem;
     }
 
     main .galeria .item-galeria {
-      margin: 5px;
-      border: 1px solid #ccc;
-      float: left;
-      width: 180px;
+      width: 13.5rem;
+      height: 13rem;
+
+      border: 0;
+      border-radius: 0.8rem;
+
+      background: #c7c2c2;
+
+      display: flex; 
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
     }
 
     main .galeria .item-galeria img {
-      width: 100%;
+      width: 13.5rem;
       height: auto;
+
+      border-top-left-radius: 0.8rem;
+      border-top-right-radius: 0.8rem;
     }
   </style>
 </head>
@@ -121,6 +137,7 @@
       <li><a href="viagem.html">Custo da Viagem</a></li>
       <li><a href="sobre.html">Sobre</a></li>
       <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="videos.html">Videos do Youtube</a></li>
     </ul>
   </nav>
   <main>
@@ -132,21 +149,25 @@
         <a href="/img/corrida.jpg" target="_blank">
           <img src="/img/corrida.jpg" alt="imagem de corrida">
         </a>
+        <p>Corrida para melhorar cardiorespiração</p>
       </div>
       <div class="item-galeria">
         <a href="/img/dieta.jpg" target="_blank">
           <img src="/img/dieta.jpg" alt="">
         </a>
+        <p>Dieta para diminuir colesterol</p>
       </div>
       <div class="item-galeria">
         <a href="/img/lazer.jpg" target="_blank">
           <img src="/img/lazer.jpg" alt="">
         </a>
+        <p>Lazer para melhorar aspectos mentais</p>
       </div>
       <div class="item-galeria">
         <a href="/img/natacao.png" target="_blank">
           <img src="/img/natacao.png" alt="">
         </a>
+        <p>Natação para sincronismo e respiração</p>
       </div>
     </div>
   </main>
