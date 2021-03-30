@@ -1,22 +1,23 @@
 programa
 {
 
-	inclua biblioteca Matematica --> mat
+	/*
+		Escreva um algoritmo que leia um número e imprima se o número é positivo ou negativo.
+	*/
 	
 	funcao inicio()
 	{
-		real prestacao, desconto, acrecimo, prejuizo
+
+		inteiro numero
 		
-		escreva("Qual é o valor da prestação? \n")
-		leia(prestacao)
-		
-		acrecimo = prestacao * 1.1
+		escreva("Digite um número \n")
+		leia(numero)
 
-		desconto = acrecimo * 0.9
-
-		prejuizo = prestacao - desconto
-
-		escreva(mat.arredondar(prejuizo, 2))
+		se (numero <= 0) {
+			escreva("Negativo")
+		} senao {
+			escreva("Positivo")
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 245; 
+ * @POSICAO-CURSOR = 284; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

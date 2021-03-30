@@ -1,22 +1,26 @@
 programa
 {
-
-	inclua biblioteca Matematica --> mat
+	
+	/*
+	Fazer um algoritmo que leia um número e imprima se o número é par ou ímpar.
+	*/
 	
 	funcao inicio()
 	{
-		real prestacao, desconto, acrecimo, prejuizo
-		
-		escreva("Qual é o valor da prestação? \n")
-		leia(prestacao)
-		
-		acrecimo = prestacao * 1.1
+		inteiro numero
+		inteiro resto
+	
+		escreva("Digite um número \n")
+		leia(numero)
 
-		desconto = acrecimo * 0.9
+		resto = (numero % 2)
 
-		prejuizo = prestacao - desconto
-
-		escreva(mat.arredondar(prejuizo, 2))
+		se (resto == 0) {
+			escreva("O número digitado é par")
+		}
+		senao {
+			escreva("O número digitado é impar")	
+		}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -24,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 245; 
+ * @POSICAO-CURSOR = 333; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
