@@ -1,0 +1,14 @@
+#conteudo {
+  width: 900rem;
+}
+
+#tabela {
+  font-family: Helvetica, sans-serif;
+  width: 60rem;
+  border-collapse: collapse;
+}
+
+#tabela td, #tabela th {
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.8rem
+}
