@@ -12,3 +12,12 @@
   border: 1px solid #ddd;
   padding: 0.5rem 0.8rem
 }
+
+#tabela th {
+  color: #ffffff;
+  background: #828282;
+}
+
+#tabela tr:hover {
+  background: #878787
+}

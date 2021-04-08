@@ -62,6 +62,25 @@ body {
   outline: none;
 }
 
+#menu .menu li .menu-suspenso {
+  position: relative;
+  display: inline-block;
+}
+
+#menu .menu li .menu-suspenso:hover .conteudo-menu-suspenso {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menu .menu li .menu-suspenso .conteudo-menu-suspenso {
+  width: 7.5rem;
+  position: absolute;
+  display: none;
+  min-height: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+}
+
 main {
   height: 15rem;
 
