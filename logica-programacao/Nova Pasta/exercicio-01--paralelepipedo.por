@@ -35,10 +35,10 @@ programa
 		volume = perimetro * largura * altura
 		diagonal = mat.raiz(mat.potencia(comprimento, 2.0) + mat.potencia(largura, 2.0) + mat.potencia(altura, 2.0), 2.0)
 
-		escreva("O perímetro do paralelepípedo é " + mat.arredondar(perimetro, 2) + "\n")
-		escreva("O área do paralelepípedo é " + mat.arredondar(area, 2) + "\n")
-		escreva("O volume do paralelepípedo é " + mat.arredondar(volume, 2) + "\n")
-		escreva("A diagonal do paralelepípedo é " + mat.arredondar(diagonal, 2) + "\n")
+		escreva("O perímetro do paralelepípedo é ", mat.arredondar(perimetro, 2) + "\n")
+		escreva("O área do paralelepípedo é ", mat.arredondar(area, 2) + "\n")
+		escreva("O volume do paralelepípedo é ", mat.arredondar(volume, 2) + "\n")
+		escreva("A diagonal do paralelepípedo é ", mat.arredondar(diagonal, 2) + "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -46,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 56; 
+ * @POSICAO-CURSOR = 1028; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
