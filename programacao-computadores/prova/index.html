@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculador de Gasto de Combustível de Uma Viagem</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="main">
+    <h1>Calculo de gasto de combustível</h1>
+    <div class="form-element">
+      <label for="km">Quantos quilometros você viajou? </label>
+      <input class="km" type="number" name="km" />
+    </div>
+    <div class="form-element">
+      <label for="kml">Quilometros por litro seu carro faz? </label>
+      <input class="kml" type="number" name="kml" />
+    </div>
+    <div class="form-element">
+      <label for="liter">Qual o preço do litro? </label>
+    <input class="liter" type="number" name="liter" />
+    </div>
+    <button class="btn" type="button" onClick="calculateFuel()">Calcular Gasto de Combustível</button>
+    <div class="result"></div>
+  </main>
+  <script src="./scripts.js"></script>
+</body>
+</html>
